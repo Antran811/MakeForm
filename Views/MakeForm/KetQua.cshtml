@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Makeform.Models.SinhVien>
+@{
+    ViewBag.Title = "KetQua";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>KetQua</h2>
+<style>
+    .xxx img{
+          height:20;
+          width:20;
+    }
+</style>
+<div>
+    <table cellpadding="0" cellspacing="0" border="1">
+        <tr class="xxx">
+            <td>Mã sinh viên </td>
+            <td>Tên sinh viên </td>
+            <td>Ngày sinh</td>
+            <td>Toán </td>
+            <td>Lý </td>
+            <td>Hóa</td>
+            <td>Điểm TB</td>
+            <td>Anh</td>
+
+        </tr>
+      <tbody>
+         
+              @foreach (var item in Model)
+              {
+          <tr >
+
+              <td>@item.MaSV</td>
+              <td>@item.TenSV</td>
+              <td>@item.NgaySinh</td>
+              <td >@item.Toan</td>
+              <td >@item.Ly</td>
+              <td >@item.Hoa</td>
+              <td >@item.tongdiem</td>
+
+              <th class="xxx"><img src="@item.Anh"  /></th>
+
+
+
+
+          </tr>
+                  }
+             
+      </tbody>
+    </table>
+    <br />
+    @Html.ActionLink("Add new student", "Index")
+</div>
