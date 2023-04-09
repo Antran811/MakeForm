@@ -1,0 +1,3 @@
+install-package jquery
+install-package jquery.validation
+install-package microsoft.jquery.unobtrusive.validation
