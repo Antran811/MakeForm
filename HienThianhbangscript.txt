@@ -1,0 +1,25 @@
+ <input type="file" id="fileImage" name="filAnh"/>
+
+                <br />
+
+                <img id="preview" src="#" width="150" height="100" class="hidden" />
+
+                <br />
+                @* script của upload *@
+
+                <script>
+
+                    fileImage.onchange = evt => {
+
+                        const [file] = fileImage.files
+
+                        if (file) {
+
+                            preview.src = URL.createObjectURL(file);
+
+                            $("#preview").removeClass("hidden");
+
+                        }
+                    }
+
+                </script>
